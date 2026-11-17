@@ -1,0 +1,556 @@
+/* ==========================================================================
+   Contact Section — WolfoxLab
+   Theme inherited from #1c2459 (Deep Navy) & #f5ff67 (Electric Yellow)
+   ========================================================================== */
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    background-color: #151a42;
+    padding: 105px 24px 120px;
+    overflow: hidden;
+    color: #ffffff;
+    box-sizing: border-box;
+    scroll-margin-top: 70px;
+    border-top: 1px solid rgba(245, 255, 103, 0.08);
+}
+
+/* --- Ambient Glows --- */
+.contact-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(140px);
+    z-index: 0;
+    opacity: 0.16;
+}
+
+.contact-glow-left {
+    top: 25%;
+    left: -180px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, #f5ff67 0%, rgba(245, 255, 103, 0) 70%);
+}
+
+.contact-glow-right {
+    bottom: 10%;
+    right: -160px;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, #384ca0 0%, rgba(28, 36, 89, 0) 70%);
+    opacity: 0.35;
+}
+
+/* --- Container --- */
+.contact-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- Section Header --- */
+.contact-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 64px;
+}
+
+.contact-eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #f5ff67;
+    background: rgba(245, 255, 103, 0.1);
+    border: 1px solid rgba(245, 255, 103, 0.25);
+    border-radius: 9999px;
+    padding: 6px 22px;
+    margin-bottom: 22px;
+}
+
+.contact-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -1.2px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-title-accent {
+    color: #f5ff67;
+    display: inline-block;
+    text-shadow: 0 0 28px rgba(245, 255, 103, 0.32);
+}
+
+.contact-subtitle {
+    font-size: clamp(15px, 2vw, 17px);
+    line-height: 1.65;
+    color: #c7ceea;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* --- Two-Column Layout --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   Left Column: Company Information & Communication Channels
+   ========================================================================== */
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Company Brand Card */
+.company-info-card {
+    background: rgba(16, 22, 58, 0.85);
+    border: 1px solid rgba(245, 255, 103, 0.25);
+    border-radius: 22px;
+    padding: 34px 30px;
+    box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.company-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #f5ff67;
+    background: rgba(245, 255, 103, 0.1);
+    border: 1px solid rgba(245, 255, 103, 0.25);
+    border-radius: 9999px;
+    padding: 4px 14px;
+    margin-bottom: 14px;
+}
+
+.company-name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.company-tagline {
+    font-size: 14px;
+    color: #c0c7e2;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+/* Pulse Status Dot */
+.company-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #f5ff67;
+    background: rgba(245, 255, 103, 0.08);
+    border: 1px solid rgba(245, 255, 103, 0.2);
+    border-radius: 9999px;
+    padding: 7px 16px;
+}
+
+.status-dot-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #27c93f;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #27c93f;
+    animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 0.6;
+    }
+}
+
+/* Contact Channels */
+.contact-channels-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-channel-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(16, 22, 58, 0.75);
+    border: 1px solid rgba(245, 255, 103, 0.15);
+    border-radius: 18px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: inherit;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.4);
+}
+
+.contact-channel-card:not(.contact-channel-static):hover {
+    transform: translateY(-4px);
+    border-color: rgba(245, 255, 103, 0.65);
+    background: rgba(22, 30, 77, 0.88);
+    box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5),
+                0 0 22px rgba(245, 255, 103, 0.18);
+}
+
+.channel-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(245, 255, 103, 0.12);
+    border: 1px solid rgba(245, 255, 103, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5ff67;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.channel-icon-box svg {
+    width: 22px;
+    height: 22px;
+}
+
+.contact-channel-card:hover .channel-icon-box {
+    background: #f5ff67;
+    color: #1c2459;
+    box-shadow: 0 0 16px rgba(245, 255, 103, 0.45);
+}
+
+.channel-icon-whatsapp {
+    background: rgba(39, 201, 63, 0.15);
+    border-color: rgba(39, 201, 63, 0.35);
+    color: #27c93f;
+}
+
+.contact-channel-card:hover .channel-icon-whatsapp {
+    background: #27c93f;
+    color: #1c2459;
+    box-shadow: 0 0 16px rgba(39, 201, 63, 0.45);
+}
+
+.channel-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex-grow: 1;
+}
+
+.channel-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9cb2d6;
+}
+
+.channel-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    transition: color 0.25s ease;
+}
+
+.contact-channel-card:hover .channel-value {
+    color: #f5ff67;
+}
+
+.channel-sub {
+    font-size: 12px;
+    color: #c0c7e2;
+}
+
+.channel-arrow {
+    width: 18px;
+    height: 18px;
+    color: #f5ff67;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.contact-channel-card:hover .channel-arrow {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Right Column: Inquiry Form Card
+   ========================================================================== */
+.contact-form-card {
+    background: rgba(16, 22, 58, 0.85);
+    border: 1px solid rgba(245, 255, 103, 0.2);
+    border-radius: 24px;
+    padding: 38px 36px;
+    box-shadow: 0 16px 45px -10px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(245, 255, 103, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.form-card-header {
+    margin-bottom: 28px;
+}
+
+.form-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    font-size: 14.5px;
+    color: #c7ceea;
+    line-height: 1.55;
+}
+
+/* Form Fields */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e5e9ff;
+    letter-spacing: 0.3px;
+}
+
+.label-required {
+    color: #f5ff67;
+}
+
+.label-optional {
+    font-size: 11.5px;
+    font-weight: 400;
+    color: #8b9bb4;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    background: rgba(11, 15, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 13px 16px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14.5px;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: #f5ff67;
+    background: rgba(16, 22, 58, 0.95);
+    box-shadow: 0 0 16px rgba(245, 255, 103, 0.25);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #6d7b9c;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 105px;
+}
+
+/* Select Dropdown */
+.form-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 38px;
+}
+
+.form-select option {
+    background-color: #161c47;
+    color: #ffffff;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: #f5ff67;
+    pointer-events: none;
+}
+
+/* Submit Button */
+.form-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1c2459;
+    background: #f5ff67;
+    border: none;
+    border-radius: 9999px;
+    padding: 16px 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(245, 255, 103, 0.35);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 6px;
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(245, 255, 103, 0.55);
+    filter: brightness(1.05);
+}
+
+.btn-arrow {
+    width: 17px;
+    height: 17px;
+    transition: transform 0.25s ease;
+}
+
+.form-submit-btn:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Success Message */
+.form-success-box {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeInSuccess 0.4s ease-out;
+}
+
+@keyframes fadeInSuccess {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.success-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(39, 201, 63, 0.15);
+    border: 2px solid #27c93f;
+    color: #27c93f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    box-shadow: 0 0 25px rgba(39, 201, 63, 0.4);
+}
+
+.success-icon-wrap svg {
+    width: 28px;
+    height: 28px;
+}
+
+.success-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.success-desc {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #c7ceea;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Layouts --- */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .contact-form-card {
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 680px) {
+    .contact-section {
+        padding: 70px 18px 90px;
+    }
+
+    .form-row-two {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .company-info-card {
+        padding: 26px 20px;
+    }
+
+    .contact-form-card {
+        padding: 26px 20px;
+    }
+
+    .form-submit-btn {
+        width: 100%;
+    }
+}

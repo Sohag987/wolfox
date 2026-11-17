@@ -1,0 +1,27 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Projects from './components/Projects';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import MenuProvider from './contexts/menucontext';
+import './App.css';
+
+function App() {
+  return (
+    <MenuProvider>
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </MenuProvider>
+  );
+}
+
+export default App;
